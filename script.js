@@ -25,11 +25,20 @@
       move4.innerHTML = dataMoves[3]['move']['name'];
      pokId.innerHTML = data.id;
      image1.src = data['sprites']['front_default'];
+
+     const evoData = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${input}`);
+     let evoResult = await evoData.json();
+     let nameEvo = evoResult.evolves_from_species.name
+     preEvolution.innerHTML = nameEvo;
+     imageEvo(nameEvo);
+
 };
-    async function evoPokemon() {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
-        const data = await response.json();
-        console.log(data);
+    async function imageEvo(nameEvo){
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameEvo}`);
+        const data1 = await response.json();
+        
+
     }
+
 })();
 
