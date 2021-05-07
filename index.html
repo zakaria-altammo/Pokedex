@@ -1,40 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 <div class="container">
-    <div class="style-scr">
-    <div class="item" id="name">
-        <span class="poke-name"></span>
-    </div>
-    <div class="item" id="poid">
-        <span class="poke-id"></span>
-    </div>
-    <div class="item" id="image">
-        <img src="" alt="" class="poke-image">
-    </div>
+    <div class="out-scr">
+        <div class="style-scr">
+            <div class="nam" id="name">
+                <span class="poke-name"></span>
+            </div>
+            <div class="idpo" id="poid">
+                <span class="poke-id"></span>
+            </div>
+            <div class="img" id="image">
+                <img src="" alt="" class="poke-image">
+            </div>
 
-    <div class="item" id="moves">
-       <span class="move-one"></span><br>
-        <span class="move-two"></span><br>
-        <span class="move-three"></span><br>
-        <span class="move-four"></span>
-    </div>
+            <div class="mov" id="moves">
+                <span class="move-one"></span><br>
+                <span class="move-two"></span><br>
+                <span class="move-three"></span><br>
+                <span class="move-four"></span>
+            </div>
 
-    <div class="item" id="pre-evolution">
-        <span class="pre-evolution"></span>
+            <div class="evo" id="pre-evolution">
+                <span class="pre-evolution"></span><br>
+                <img src="" alt="" class="prev">
+            </div>
+        </div>
     </div>
-</div>
-<form class="search-filed">
-    <input type="text" class="search" placeholder="Type Id or Name of pokemon"><br>
-    <button class="search-btn">Search</button>
-</form>
-</div>
-
+<button type="button" id="run" class="">
+    get poke
+</button>
+<input type="text" class="searchfield" name="name or id" id="input">
 <script src="script.js"></script>
 </body>
 </html>
