@@ -28,15 +28,18 @@
 
      const evoData = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${input}`);
      let evoResult = await evoData.json();
-     let nameEvo = evoResult.evolves_from_species.name
+     console.log(evoResult);
+     let nameEvo = evoResult.evolves_from_species.name;
      preEvolution.innerHTML = nameEvo;
+
      imageEvo(nameEvo);
 
-};
+}
     async function imageEvo(nameEvo){
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameEvo}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${nameEvo}`);
         const data1 = await response.json();
-        
+         console.log(data1);
+        /* image2.src = .*/
 
     }
 
